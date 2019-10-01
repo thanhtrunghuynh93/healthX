@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FDCA2E</color>
+    <color name="colorPrimaryDark">#FF0000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="white" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00004a6b</color>
+    <color name="border">#92979B</color>
+
+    <color name="clr_row_bg">#ededed</color>
+    <color name="clr_line">#d9d9d9</color>
+</resources>

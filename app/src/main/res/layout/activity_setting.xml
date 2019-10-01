@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <RelativeLayout
+            android:id="@+id/rlToolBar"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark">
+
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_x_extra_large"
+                android:padding="10dp" />
+
+
+            <ImageView
+                android:id="@+id/ivCalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_date_range_black_24dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_margin="@dimen/activity_margin_x_small"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llGoogleDrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg_elevation"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="@dimen/activity_margin_x_small"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:padding="@dimen/activity_margin_normal"
+                        android:src="@drawable/ic_google_drive"
+                        android:text="@string/mdtp_time" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_margin_x_small"
+                            android:text="@string/google_drive"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_extra_large" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/llDropBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg_elevation"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_margin_x_small"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:padding="@dimen/activity_margin_normal"
+                        android:src="@drawable/ic_dropbox"
+                        android:text="@string/mdtp_time" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_margin_x_small"
+                            android:text="@string/dropbox"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_extra_large" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg_elevation"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_margin_x_small"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:padding="@dimen/activity_margin_normal"
+                        android:src="@drawable/ic_gmail"
+                        android:text="@string/mdtp_time" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_margin_x_small"
+                            android:text="@string/email"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_extra_large" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

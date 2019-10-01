@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StoredFoodFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/all_stored_foods"
+            android:textColor="@color/white"
+            android:padding="@dimen/activity_margin_small"
+            android:gravity="center"
+            android:textSize="@dimen/txt_medium"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFoodList"
+            android:layout_margin="@dimen/activity_margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

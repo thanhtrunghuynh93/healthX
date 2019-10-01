@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    tools:context=".fragments.AddFoodRecordFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryDark">
+
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_menu_white_24dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_x_extra_large"
+            android:padding="10dp" />
+
+
+        <ImageView
+            android:id="@+id/ivCalender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/activity_margin_normal"
+        android:padding="@dimen/activity_margin_normal"
+        android:text="@string/enter_food_detail"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_normal"
+        android:textStyle="bold" />
+    <!--EditTexts-->
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_margin_small">
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_x_small"
+            android:textColorHint="@color/colorPrimary"
+
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:boxBackgroundMode="outline"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_timer_black_24dp"
+                android:drawablePadding="16dp"
+                android:hint="@string/date"
+                android:inputType="textPersonName"
+                android:padding="@dimen/activity_margin_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/activity_margin_x_small"
+            android:textColorHint="@color/colorPrimary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+            <AutoCompleteTextView
+                android:id="@+id/actvMeal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/meal"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/activity_margin_normal"
+                android:drawablePadding="@dimen/activity_margin_normal"
+                android:drawableLeft="@drawable/ic_edit_black_24dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_x_small"
+            android:textColorHint="@color/colorPrimary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/etFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_food"
+                android:drawablePadding="16dp"
+                android:hint="@string/food"
+                android:inputType="textPersonName"
+                android:padding="@dimen/activity_margin_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_x_small"
+            android:textColorHint="@color/colorPrimary"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="16dp"
+                android:hint="@string/location"
+                android:inputType="textPersonName"
+                android:padding="@dimen/activity_margin_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Submit Button-->
+        <LinearLayout
+            android:id="@+id/llAddNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_marginTop="@dimen/activity_margin_normal"
+            android:background="@drawable/circle_border_with_accent_color"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_box_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tvAddRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_margin_normal"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/add_new"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

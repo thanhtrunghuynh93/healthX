@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <RelativeLayout
+            android:id="@+id/rlToolBar"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark">
+
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_menu_white_24dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_x_extra_large"
+                android:padding="10dp" />
+
+
+            <ImageView
+                android:id="@+id/ivCalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_date_range_black_24dp"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/bnvMain"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/parentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">HealthX</string>
+    <string name="no_internet" tools:ignore="ExtraTranslation">Internet is not available.</string>
+    <string name="retry">Retry</string>
+    <string name="user_name">Username</string>
+    <string name="paswrd">Password</string>
+    <string name="connect">Connect</string>
+    <string name="available_servers">Available Servers</string>
+    <string name="login">Login</string>
+
+    <string name="DROPBOX_APP_KEY">xkuob5o8a0dyttc</string>
+    <string name="DROPBOX_ACCESS_TOKEN">ZS4OsXmlLfAAAAAAAAAAD5JHFN1SPa2VA9xAHfoL28590fQsPYezyuyUtg84l4w6</string>
+    <string name="GOOGLE_DRIVE_API_KEY">AIzaSyCITtOsEkq95Ee211KZt5VnYC2XmY1VA4o</string>
+    <string name="GOOGLE_DRIVE_CLIENT_KEY">378066746587-u24irvep7a8lpbl9t5mj2qmdflj3ok8t.apps.googleusercontent.com</string>
+    <string name="GOOGLE_DRIVE_CLIENT_SECRET_KEY">oORfQPcfz04NmpjwOfTIPEsE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new">Add New</string>
+    <string name="date">Date</string>
+    <string name="meal">Meal</string>
+    <string name="location">Location</string>
+    <string name="food">Food</string>
+    <string name="enter_food_detail">Enter your eaten food detail</string>
+    <string name="all_stored_foods">All Stored Foods</string>
+    <string name="dropbox">Upload data to DropBox</string>
+    <string name="google_drive">Upload data to Google Drive</string>
+    <string name="email">Upload data to Email</string>
+    <string name="upload">Upload Data</string>
+    <string name="name">Name</string>
+    <string name="user_email">Email</string>
+    <string name="could_not_found_file">Couldn\'t find your file.</string>
+    <string name="app_close">Do you want to exit ?</string>
+    <string name="food_stored">Your food has been stored.</string>
+    <string name="food_not_stored">Your food has not been stored.</string>
+    <string name="no_record">No Record Found.</string>
+    <string name="food_list">Food list of</string>
+</resources>

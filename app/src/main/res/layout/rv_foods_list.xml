@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/rvParent_layout"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg_elevation"
+        android:layout_margin="@dimen/activity_margin_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMealType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_large"
+                        android:padding="@dimen/activity_margin_x_small"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/meal" />
+
+                    <TextView
+                        android:id="@+id/tvFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_medium"
+                        android:padding="@dimen/activity_margin_x_small"
+                        android:textColor="@color/black"
+                        android:text="@string/food" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="match_parent"
+                    android:text="@string/mdtp_time"
+                    android:gravity="right"
+                    android:textSize="@dimen/txt_large"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/activity_margin_small"
+                    android:padding="@dimen/activity_margin_normal"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
