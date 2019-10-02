@@ -1,6 +1,7 @@
 package com.example.healthx.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +81,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public void onDateSelected(Calendar date, int position) {
 
-                mDate = date.get(Calendar.DATE);
                 month = date.get(Calendar.MONTH) + 1;
                 year = date.get(Calendar.YEAR);
                 dayOfTheWeek = (String) DateFormat.format(SELECTED_DAY, date); // Thursday
@@ -90,7 +90,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 mYear = (String) DateFormat.format(Constants.YEAR, date); //
                 getParentActivity().setToolbarTitle(EMPTY + dayOfTheWeek + COMMA_SPACE + monthString + SPACE + selectedDay + COMMA_SPACE + mYear);
                 Bundle bundle = new Bundle();
-                bundle.putString(DATE, mDate + DASH + month + DASH + year);
+                bundle.putString(DATE, selectedDay + DASH + month + DASH + year);
                 getParentActivity().switchFragmentWithBackStack(AddFoodRecordFragment.getInstance(), bundle);
             }
         }

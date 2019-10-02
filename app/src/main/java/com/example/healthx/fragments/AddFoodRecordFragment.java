@@ -47,6 +47,7 @@ public class AddFoodRecordFragment extends BaseFragment implements View.OnClickL
     private AppCompatAutoCompleteTextView tvMeal;
     ArrayList meals = new ArrayList<>();
     DatabaseHelper databaseHelper;
+    private int isUpdate = 0;
 
     public static AddFoodRecordFragment getInstance() {
         return new AddFoodRecordFragment();
@@ -91,10 +92,13 @@ public class AddFoodRecordFragment extends BaseFragment implements View.OnClickL
                 etLocation.setText(getArguments().getString(LOCATION));
                 tvAddRecord.setText(UPDATE_RECORD);
                 llAddNew.setEnabled(false);
+                isUpdate = 1;
             }
         } else {
             date = String.valueOf(Utils.getCurrentDateAndTime());
+            Log.d("Input date", date);
             getParentActivity().setToolbarTitle(Utils.getSecondFormateDate());
+            isUpdate = 0;
         }
         mealTypes();
     }
@@ -113,17 +117,24 @@ public class AddFoodRecordFragment extends BaseFragment implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.llAddNew: {
-                addFoodRecord();
-                break;
-            }
-            case R.id.tvAddRecord: {
-                updateFoodRecord();
-                break;
-            }
 
+        if (isUpdate == 0){
+            addFoodRecord();
+        }else{
+            updateFoodRecord();
         }
+
+//        switch (v.getId()) {
+//            case R.id.llAddNew: {
+//                addFoodRecord();
+//                break;
+//            }
+//            case R.id.tvAddRecord: {
+//                updateFoodRecord();
+//                break;
+//            }
+//
+//        }
 
     }
     private void clearEditTexts()
